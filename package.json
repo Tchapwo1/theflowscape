@@ -6,6 +6,7 @@
     "build": "node scripts/build_cloudflare.js",
     "predeploy": "node scripts/build_cloudflare.js",
     "test": "node scripts/verify_audit.js",
+    "seo:ping": "node scripts/submit_search_engines.js",
     "deploy": "node scripts/build_cloudflare.js && npx wrangler deploy",
     "preview": "python -m http.server --directory dist 3000"
   },
