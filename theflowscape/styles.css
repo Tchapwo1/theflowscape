@@ -893,3 +893,123 @@ h1 em,h2 em,h3 em{
 @media(max-width:600px){
   .privacy-toast{left:16px;right:16px;bottom:16px;max-width:none}
 }
+
+/* ✦ The Flowscape Luxury Enhancements: Currency Switcher & Itinerary Accordions */
+.currency-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 2px 4px;
+  gap: 2px;
+}
+.currency-btn {
+  background: transparent;
+  border: none;
+  color: #c5cdc3;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.currency-btn:hover {
+  color: #fff;
+}
+.currency-btn.active {
+  background: #b42d32;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(180, 45, 50, 0.35);
+}
+.dest-pricing {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  background: #fbf9f4;
+  border-left: 3px solid #b42d32;
+  border-radius: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.price-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7d877b;
+  font-weight: 600;
+}
+.price-val {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e2521;
+}
+.price-detail {
+  font-size: 11px;
+  color: #7d877b;
+}
+.itinerary-accordion {
+  margin-top: 14px;
+  border: 1px solid #e7e2d6;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.itinerary-accordion[open] {
+  border-color: #b42d32;
+}
+.itinerary-accordion summary {
+  padding: 11px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #1e2521;
+  cursor: pointer;
+  background: #fcfbfa;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.itinerary-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.itinerary-accordion summary::after {
+  content: "▾";
+  font-size: 13px;
+  transition: transform 0.2s;
+  color: #b42d32;
+}
+.itinerary-accordion[open] summary::after {
+  transform: rotate(180deg);
+}
+.itinerary-schedule {
+  padding: 14px 18px;
+  border-top: 1px solid #f0ede6;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #495448;
+}
+.itinerary-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+.itinerary-time {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #b42d32;
+  min-width: 44px;
+}
+.itinerary-text strong {
+  color: #1e2521;
+}
+

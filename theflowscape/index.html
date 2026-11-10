@@ -7,6 +7,9 @@
   <meta name="description" content="Discover The Flowscape: An intimate collective of boutique yoga and wellness retreats across Europe. Small cohorts, deep nature immersion, and restorative practices in Germany, France, and the UK.">
   <title>The Flowscape — Boutique Luxury Yoga &amp; Wellness Retreats in Europe</title>
   <link rel="canonical" href="https://theflowscape.com/">
+  <!-- Search Engine Webmaster Verification Tokens -->
+  <meta name="google-site-verification" content="google-site-verification-flowscape-token">
+  <meta name="msvalidate.01" content="bing-site-verification-flowscape-token">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="site.webmanifest">
 
@@ -179,9 +182,14 @@
   <!-- Accessible Skip to Main Content Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Global Announcement -->
-  <aside class="announcement" aria-label="Announcement">
-    <span>The Flowscape Collection · 2026 Retreat Season Now Open for Early Access</span>
+  <!-- Global Announcement & Currency Switcher -->
+  <aside class="announcement" aria-label="Announcement" style="display: flex; justify-content: space-between; align-items: center; padding: 6px 24px; flex-wrap: wrap; gap: 8px;">
+    <span>✦ The Flowscape Collection · 2026 Retreat Season Now Open for Early Access</span>
+    <div class="currency-switcher" role="group" aria-label="Select currency">
+      <button type="button" class="currency-btn active" data-currency="EUR" aria-pressed="true">€ EUR</button>
+      <button type="button" class="currency-btn" data-currency="GBP" aria-pressed="false">£ GBP</button>
+      <button type="button" class="currency-btn" data-currency="USD" aria-pressed="false">$ USD</button>
+    </div>
   </aside>
 
   <!-- Main Site Header -->
@@ -321,11 +329,24 @@
               </div>
               <h3>Schwarzwald Yoga Escape</h3>
               <p>Misty pine canopies, crisp Black Forest air, and deep alpine grounding. Slow morning practices, guided woodland wandering, and warm botanical comfort.</p>
+              <div class="dest-pricing">
+                <span class="price-label">All-inclusive from</span>
+                <span class="price-val" data-price-eur="1450">€1,450</span>
+                <span class="price-detail">/ guest</span>
+              </div>
               <ul class="dest-highlights">
                 <li>Guided forest walking meditation</li>
                 <li>Restorative woodland lodge accommodation</li>
                 <li>Wholesome seasonal vegetarian dining</li>
               </ul>
+              <details class="itinerary-accordion">
+                <summary>View 3-Day Retreat Itinerary Preview</summary>
+                <div class="itinerary-schedule">
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 1</span><span class="itinerary-text"><strong>15:00</strong> Welcome botanical infusions · <strong>17:30</strong> Candlelit Grounding Yin · <strong>19:30</strong> Hearthside dinner</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 2</span><span class="itinerary-text"><strong>07:30</strong> Solar Forest Vinyasa · <strong>11:30</strong> Guided Shinrin-yoku · <strong>16:00</strong> Herbal Sauna Aufguss</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 3</span><span class="itinerary-text"><strong>08:00</strong> Somatic Flow · <strong>10:00</strong> Farewell Brunch · <strong>12:00</strong> Closing circle</span></div>
+                </div>
+              </details>
               <div class="dest-footer">
                 <a class="dest-link" href="https://bermondish.github.io/schwarzwald-yoga-escape/" data-local-href="../schwarzwald-yoga-escape/index.html" target="_blank" rel="noopener">
                   Explore Schwarzwald Retreat <span>↗</span>
@@ -347,11 +368,24 @@
               </div>
               <h3>Provence Yoga Escape</h3>
               <p>Sun-dappled terrace yoga, fragrant lavender plateaus, and cicada song. Private 18th-century stone bastide, poolside repose, and vibrant Mediterranean market dining.</p>
+              <div class="dest-pricing">
+                <span class="price-label">All-inclusive from</span>
+                <span class="price-val" data-price-eur="1650">€1,650</span>
+                <span class="price-detail">/ guest</span>
+              </div>
               <ul class="dest-highlights">
                 <li>Open-air terrace sunrise &amp; sunset yin</li>
                 <li>Olive grove harmonic sound baths</li>
                 <li>Farm-to-table Provençal feasts &amp; local olive oils</li>
               </ul>
+              <details class="itinerary-accordion">
+                <summary>View 3-Day Retreat Itinerary Preview</summary>
+                <div class="itinerary-schedule">
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 1</span><span class="itinerary-text"><strong>15:00</strong> Bastide reception &amp; iced lavender tea · <strong>17:30</strong> Golden hour terrace flow · <strong>19:45</strong> Provençal feast</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 2</span><span class="itinerary-text"><strong>07:15</strong> Olive grove meditation · <strong>08:30</strong> Dynamic Vinyasa · <strong>17:30</strong> Sunset sound bath</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 3</span><span class="itinerary-text"><strong>08:00</strong> Harmonizing flow · <strong>10:30</strong> Celebration brunch · <strong>12:30</strong> Gentle departure</span></div>
+                </div>
+              </details>
               <div class="dest-footer">
                 <a class="dest-link" href="https://bermondish.github.io/provence-yoga-escape/" data-local-href="../provence-yoga-escape/index.html" target="_blank" rel="noopener">
                   Explore Provence Retreat <span>↗</span>
@@ -373,11 +407,24 @@
               </div>
               <h3>London Yoga Escape</h3>
               <p>An unexpected urban sanctuary tucked away from the capital's rush. Sunlit glasshouse studios, royal parkland walks, restorative gong journeys, and botanical dining.</p>
+              <div class="dest-pricing">
+                <span class="price-label">Weekend from</span>
+                <span class="price-val" data-price-eur="890">€890</span>
+                <span class="price-detail">/ guest · Residential</span>
+              </div>
               <ul class="dest-highlights">
                 <li>Glasshouse dynamic vinyasa &amp; acoustic gongs</li>
                 <li>Boutique Victorian townhouse lodging</li>
                 <li>Chef-crafted botanical plant-forward feasts</li>
               </ul>
+              <details class="itinerary-accordion">
+                <summary>View Weekend Retreat Itinerary Preview</summary>
+                <div class="itinerary-schedule">
+                  <div class="itinerary-item"><span class="itinerary-time">FRI</span><span class="itinerary-text"><strong>18:00</strong> Twilight Sound Immersion &amp; nervous system unwind · <strong>20:00</strong> Tonic elixir bar</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">SAT</span><span class="itinerary-text"><strong>09:00</strong> Glasshouse dynamic flow · <strong>13:30</strong> Breathwork masterclass · <strong>16:00</strong> Restorative gong bath</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">SUN</span><span class="itinerary-text"><strong>09:30</strong> Grounding integration vinyasa · <strong>11:30</strong> Botanical brunch &amp; closing tea ceremony</span></div>
+                </div>
+              </details>
               <div class="dest-footer">
                 <a class="dest-link" href="https://bermondish.github.io/london-yoga-escape/" data-local-href="../london-yoga-escape/index.html" target="_blank" rel="noopener">
                   Explore London Retreat <span>↗</span>
@@ -399,11 +446,24 @@
               </div>
               <h3>Tuscany Yoga Escape</h3>
               <p>Sun-warmed terracotta terraces, cypress-lined walking meditations, acoustic sound journeys, and farm-to-table Tuscan feasts.</p>
+              <div class="dest-pricing">
+                <span class="price-label">Projected from</span>
+                <span class="price-val" data-price-eur="1550">€1,550</span>
+                <span class="price-detail">/ guest · 2027 Priority</span>
+              </div>
               <ul class="dest-highlights">
                 <li>16th-century stone villa with panoramic valley views</li>
                 <li>Pergola sound baths and olive harvest rituals</li>
                 <li>Private chef-crafted Italian organic terroir dining</li>
               </ul>
+              <details class="itinerary-accordion">
+                <summary>View 3-Day Retreat Itinerary Preview</summary>
+                <div class="itinerary-schedule">
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 1</span><span class="itinerary-text"><strong>15:00</strong> Stone villa arrival · <strong>17:30</strong> Terroir twilight yin · <strong>19:30</strong> Tuscan cellar welcome dinner</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 2</span><span class="itinerary-text"><strong>07:30</strong> Cypress morning pranayama · <strong>11:00</strong> Olive harvest mindful walking · <strong>17:00</strong> Pergola acoustic sound bath</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 3</span><span class="itinerary-text"><strong>08:30</strong> Renaissance integration flow · <strong>10:30</strong> Long table harvest brunch · <strong>12:30</strong> Closing gratitude</span></div>
+                </div>
+              </details>
               <div class="dest-footer">
                 <a class="dest-link" href="https://theflowscape.com/tuscany/" data-local-href="../tuscany-yoga-escape/index.html" target="_blank" rel="noopener">
                   Explore Tuscany Retreat <span>↗</span>
@@ -425,11 +485,24 @@
               </div>
               <h3>Swiss Alps Yoga Escape</h3>
               <p>Panoramic mountain vinyasa, natural thermal spring baths, cold glacial stream immersion, and fireside restorative yoga nidra.</p>
+              <div class="dest-pricing">
+                <span class="price-label">Projected from</span>
+                <span class="price-val" data-price-eur="1850">€1,850</span>
+                <span class="price-detail">/ guest · 2027 Priority</span>
+              </div>
               <ul class="dest-highlights">
                 <li>High-altitude vinyasa facing 3,000m summits</li>
                 <li>Thermal mineral soaking and cold plunge cycles</li>
                 <li>Private larch wood alpine chalet accommodation</li>
               </ul>
+              <details class="itinerary-accordion">
+                <summary>View 3-Day Retreat Itinerary Preview</summary>
+                <div class="itinerary-schedule">
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 1</span><span class="itinerary-text"><strong>15:00</strong> High-altitude check-in · <strong>17:00</strong> Thermal mineral soak · <strong>19:30</strong> Fireside alpine dinner</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 2</span><span class="itinerary-text"><strong>07:30</strong> Glacier peak sunrise vinyasa · <strong>11:00</strong> Glacial cold immersion &amp; sauna · <strong>17:00</strong> Restorative yoga nidra</span></div>
+                  <div class="itinerary-item"><span class="itinerary-time">DAY 3</span><span class="itinerary-text"><strong>08:00</strong> Alpine clarity flow · <strong>10:00</strong> Organic farewell breakfast · <strong>12:00</strong> Mountain departure</span></div>
+                </div>
+              </details>
               <div class="dest-footer">
                 <a class="dest-link" href="https://theflowscape.com/swiss-alps/" data-local-href="../swiss-alps-yoga-escape/index.html" target="_blank" rel="noopener">
                   Explore Swiss Alps Retreat <span>↗</span>
@@ -626,6 +699,8 @@
         </p>
 
         <form id="circle-form" class="circle-form" novalidate>
+          <!-- Anti-spam Honeypot (hidden from human visitors) -->
+          <input type="text" name="website_check" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-group">
             <label for="circle-name">Your Full Name</label>
             <input type="text" id="circle-name" name="name" placeholder="Full Name" required minlength="2" autocomplete="name">

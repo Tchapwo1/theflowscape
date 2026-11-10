@@ -133,17 +133,43 @@ if (form) {
     };
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/bermondish@gmail.com', {
+      // 1. Attempt Cloudflare Edge Concierge API
+      const edgeResponse = await fetch('/api/inquiry', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: nameVal,
+          email: emailVal,
+          destination: 'London Yoga Escape (United Kingdom)',
+          season,
+          accommodations: guests,
+          website_check: form.querySelector('input[name="website_check"]')?.value || '',
+        })
       });
-      if (!response.ok) throw new Error('Network error');
+
+      if (!edgeResponse.ok) {
+        await fetch('https://formsubmit.co/ajax/bermondish@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+      }
     } catch (err) {
-      console.warn('Network intake logged:', err);
+      try {
+        await fetch('https://formsubmit.co/ajax/bermondish@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+      } catch (fallbackErr) {
+        console.warn('Network intake logged:', fallbackErr);
+      }
     }
 
     // Success State Presentation
@@ -162,3 +188,51 @@ if (form) {
     }
   });
 }
+
+// ✦ Dynamic Multi-Currency Engine (EUR € · GBP £ · USD $)
+const RATES_FROM_EUR = {
+  EUR: { rate: 1.0, symbol: '€' },
+  GBP: { rate: 0.85, symbol: '£' },
+  USD: { rate: 1.08, symbol: '$' }
+};
+
+const CURRENCY_KEY = 'flowscape_currency';
+
+function formatCurrency(amountEur, currency) {
+  const conf = RATES_FROM_EUR[currency] || RATES_FROM_EUR.GBP;
+  const converted = Math.round(amountEur * conf.rate);
+  return `${conf.symbol}${converted.toLocaleString()}`;
+}
+
+function updateAllPrices(currency) {
+  const priceElements = document.querySelectorAll('[data-price-eur]');
+  priceElements.forEach(el => {
+    const baseEur = parseFloat(el.getAttribute('data-price-eur'));
+    if (!isNaN(baseEur)) {
+      el.textContent = formatCurrency(baseEur, currency);
+    }
+  });
+
+  const currencyBtns = document.querySelectorAll('.currency-btn');
+  currencyBtns.forEach(btn => {
+    const isTarget = btn.getAttribute('data-currency') === currency;
+    btn.classList.toggle('active', isTarget);
+    btn.setAttribute('aria-pressed', String(isTarget));
+  });
+
+  try {
+    localStorage.setItem(CURRENCY_KEY, currency);
+  } catch (e) {}
+}
+
+const activeCurrency = localStorage.getItem(CURRENCY_KEY) || 'GBP';
+updateAllPrices(activeCurrency);
+
+document.querySelectorAll('.currency-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const selected = btn.getAttribute('data-currency');
+    if (selected && RATES_FROM_EUR[selected]) {
+      updateAllPrices(selected);
+    }
+  });
+});
