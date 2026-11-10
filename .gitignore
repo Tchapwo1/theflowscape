@@ -1,0 +1,17 @@
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cloudflare & Build Output
+.wrangler/
+dist/

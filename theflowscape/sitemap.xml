@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Master Umbrella Hub -->
+  <url>
+    <loc>https://theflowscape.com/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&amp;fit=crop&amp;w=1200&amp;q=85</image:loc>
+      <image:title>The Flowscape — Boutique Luxury Yoga &amp; Wellness Retreats in Europe</image:title>
+      <image:caption>Curated collection of boutique yoga sanctuaries across Germany, France, the UK, Italy, and Switzerland</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Destination 1: Schwarzwald (Germany) -->
+  <url>
+    <loc>https://theflowscape.com/schwarzwald/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&amp;fit=crop&amp;w=1400&amp;q=88</image:loc>
+      <image:title>Schwarzwald Yoga Escape — Forest &amp; Alpine Wellness Retreat</image:title>
+      <image:caption>Misty pine canopies, alpine herbal saunas, and guided forest bathing in the Black Forest, Germany</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Destination 2: Provence (France) -->
+  <url>
+    <loc>https://theflowscape.com/provence/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1300&amp;q=85</image:loc>
+      <image:title>Provence Yoga Escape — Sunlit Bastide Wellness Retreat</image:title>
+      <image:caption>Sun-dappled terrace yoga, olive grove sound baths, and terroir feasts in the Luberon Valley, France</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Destination 3: London (United Kingdom) -->
+  <url>
+    <loc>https://theflowscape.com/london/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=1400&amp;q=88</image:loc>
+      <image:title>London Yoga Escape — Botanical Urban Wellness Retreat</image:title>
+      <image:caption>Glasshouse morning vinyasa, royal parkland walking meditation, and boutique Victorian townhouse rest in Richmond and Hampstead</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Destination 4: Tuscany (Italy) -->
+  <url>
+    <loc>https://theflowscape.com/tuscany/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=1400&amp;q=88</image:loc>
+      <image:title>Tuscany Yoga Escape — Sunlit Chianti Villa Retreat</image:title>
+      <image:caption>Rolling cypress hills, terrace solar flows, and olive harvest feasts in Tuscany, Italy</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Destination 5: Swiss Alps (Switzerland) -->
+  <url>
+    <loc>https://theflowscape.com/swiss-alps/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&amp;fit=crop&amp;w=1400&amp;q=88</image:loc>
+      <image:title>Swiss Alps Yoga Escape — Alpine Thermal Sanctuary</image:title>
+      <image:caption>High-altitude mountain vinyasa, natural thermal baths, and larch chalets in the Engadin Valley, Switzerland</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Legal & Trust Gateways -->
+  <url>
+    <loc>https://theflowscape.com/privacy.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://theflowscape.com/terms.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

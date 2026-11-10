@@ -1,0 +1,16 @@
+# Cloudflare Pages Redirect Rules
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Subpath clean URL normalization
+/schwarzwald   /schwarzwald/   301
+/provence      /provence/      301
+/london        /london/        301
+/tuscany       /tuscany/       301
+/swiss-alps    /swiss-alps/    301
+
+# Legacy & regional shortcuts
+/germany       /schwarzwald/   301
+/france        /provence/      301
+/uk            /london/        301
+/italy         /tuscany/       301
+/switzerland   /swiss-alps/    301

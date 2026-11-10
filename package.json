@@ -1,0 +1,20 @@
+{
+  "name": "theflowscape-monorepo",
+  "version": "1.0.0",
+  "description": "The Flowscape Umbrella Retreat Collection & Regional Sanctuaries",
+  "scripts": {
+    "build": "node scripts/build_cloudflare.js",
+    "test": "node scripts/verify_audit.js",
+    "deploy": "npx wrangler pages deploy dist --project-name=theflowscape",
+    "preview": "python -m http.server --directory dist 3000"
+  },
+  "keywords": [
+    "flowscape",
+    "yoga",
+    "wellness",
+    "retreats",
+    "cloudflare-pages"
+  ],
+  "author": "The Flowscape Collective",
+  "license": "UNLICENSED"
+}
