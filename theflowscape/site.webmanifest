@@ -1,0 +1,17 @@
+{
+  "name": "The Flowscape Retreats & Sanctuaries",
+  "short_name": "The Flowscape",
+  "description": "Boutique luxury yoga and wellness retreats across Europe and the globe.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#1e2521",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
