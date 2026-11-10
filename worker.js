@@ -26,7 +26,7 @@ export default {
           status: "healthy",
           platform: "The Flowscape Edge Gateway",
           timestamp: new Date().toISOString(),
-          version: "1.2.0",
+          version: "1.3.0",
         }),
         {
           headers: {
@@ -35,6 +35,56 @@ export default {
           },
         }
       );
+    }
+
+    // 2b. TSCAPE TV Catalog Endpoint (Supabase Postgres + Static Fallback)
+    if (url.pathname === "/api/tv/catalog" && request.method === "GET") {
+      if (env && env.SUPABASE_URL && env.SUPABASE_ANON_KEY) {
+        try {
+          const sbUrl = `${env.SUPABASE_URL.replace(/\/$/, "")}/rest/v1/tscape_videos?is_published=eq.true&order=is_featured.desc,published_at.desc`;
+          const sbRes = await fetch(sbUrl, {
+            headers: {
+              apikey: env.SUPABASE_ANON_KEY,
+              Authorization: `Bearer ${env.SUPABASE_ANON_KEY}`,
+              Accept: "application/json",
+            },
+          });
+
+          if (sbRes.ok) {
+            const videos = await sbRes.json();
+            if (Array.isArray(videos) && videos.length > 0) {
+              return new Response(JSON.stringify({ source: "supabase", videos }), {
+                headers: {
+                  "Content-Type": "application/json",
+                  "Cache-Control": "public, max-age=60",
+                  ...CORS_HEADERS,
+                },
+              });
+            }
+          }
+        } catch (sbErr) {
+          console.warn("Supabase catalog fallback triggered:", sbErr);
+        }
+      }
+
+      // Deterministic Static Manifest Fallback
+      try {
+        const assetRes = await env.ASSETS.fetch(new Request(new URL("/tv/catalog.json", request.url)));
+        if (assetRes.ok) {
+          const videos = await assetRes.json();
+          return new Response(JSON.stringify({ source: "static", videos }), {
+            headers: {
+              "Content-Type": "application/json",
+              "Cache-Control": "public, max-age=300",
+              ...CORS_HEADERS,
+            },
+          });
+        }
+      } catch (e) {}
+
+      return new Response(JSON.stringify({ source: "empty", videos: [] }), {
+        headers: { "Content-Type": "application/json", ...CORS_HEADERS },
+      });
     }
 
     // 3. Priority Circle Concierge Inquiry API

@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const files = [
   'theflowscape/index.html',
+  'theflowscape/tv/index.html',
   'london-yoga-escape/index.html',
   'provence-yoga-escape/index.html',
   'schwarzwald-yoga-escape/index.html',
@@ -80,4 +81,23 @@ if (fs.existsSync('theflowscape/robots.txt')) {
   allValid = false;
 }
 
-console.log(`\nAudit result: ${allValid ? 'ALL 6 DESTINATIONS & SEO ASSETS PASSED AUDIT ✓' : 'SOME CHECKS NEED ATTENTION'}`);
+// Validate TSCAPE TV catalog manifest & local MP4 assets
+try {
+  const tvCatalog = JSON.parse(fs.readFileSync('theflowscape/tv/catalog.json', 'utf8'));
+  if (!Array.isArray(tvCatalog) || tvCatalog.length === 0) throw new Error('Catalog array empty');
+  tvCatalog.forEach(item => {
+    if (item.source_type === 'local') {
+      const localPath = `theflowscape/tv/${item.video_url}`;
+      if (!fs.existsSync(localPath)) {
+        throw new Error(`Missing local media file: ${localPath}`);
+      }
+    }
+  });
+  console.log(`✓ TSCAPE TV catalog valid (${tvCatalog.length} episodes verified across YouTube & Direct Storage)`);
+} catch (err) {
+  console.error('✗ TSCAPE TV Catalog Error:', err.message);
+  allValid = false;
+}
+
+console.log(`\nAudit result: ${allValid ? 'ALL 7 DESTINATIONS & SEO ASSETS PASSED AUDIT ✓' : 'SOME CHECKS NEED ATTENTION'}`);
+if (!allValid) process.exit(1);

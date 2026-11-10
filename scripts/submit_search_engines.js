@@ -11,6 +11,7 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const URL_LIST = [
   'https://theflowscape.com/',
+  'https://theflowscape.com/tv/',
   'https://theflowscape.com/schwarzwald/',
   'https://theflowscape.com/provence/',
   'https://theflowscape.com/london/',
