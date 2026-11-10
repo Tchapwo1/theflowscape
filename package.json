@@ -4,9 +4,13 @@
   "description": "The Flowscape Umbrella Retreat Collection & Regional Sanctuaries",
   "scripts": {
     "build": "node scripts/build_cloudflare.js",
+    "predeploy": "node scripts/build_cloudflare.js",
     "test": "node scripts/verify_audit.js",
-    "deploy": "npx wrangler pages deploy dist --project-name=theflowscape",
+    "deploy": "node scripts/build_cloudflare.js && npx wrangler deploy",
     "preview": "python -m http.server --directory dist 3000"
+  },
+  "devDependencies": {
+    "wrangler": "^4.159.0"
   },
   "keywords": [
     "flowscape",
