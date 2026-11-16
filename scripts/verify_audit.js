@@ -7,7 +7,9 @@ const files = [
   'provence-yoga-escape/index.html',
   'schwarzwald-yoga-escape/index.html',
   'tuscany-yoga-escape/index.html',
-  'swiss-alps-yoga-escape/index.html'
+  'swiss-alps-yoga-escape/index.html',
+  'theflowscape/journal/index.html',
+  'theflowscape/journal/weekend-yoga-retreats-near-london/index.html'
 ];
 
 let allValid = true;
