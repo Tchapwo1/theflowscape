@@ -3,6 +3,8 @@ const fs = require('fs');
 const files = [
   'theflowscape/index.html',
   'theflowscape/tv/index.html',
+  'theflowscape/journal/index.html',
+  'theflowscape/journal/yoga-retreats-in-france-provence-guide/index.html',
   'london-yoga-escape/index.html',
   'provence-yoga-escape/index.html',
   'schwarzwald-yoga-escape/index.html',
