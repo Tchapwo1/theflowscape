@@ -6,7 +6,7 @@
   <!-- Master Umbrella Hub -->
   <url>
     <loc>https://theflowscape.com/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -91,6 +91,25 @@
       <image:loc>https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&amp;fit=crop&amp;w=1400&amp;q=85</image:loc>
       <image:title>TSCAPE TV — Sanctuary Films &amp; Guided Practices</image:title>
       <image:caption>Architectural films, breathwork sessions, and sanctuary previews across Europe</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Journal -->
+  <url>
+    <loc>https://theflowscape.com/journal/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theflowscape.com/journal/yoga-retreats-in-france-provence-guide/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=1300&amp;q=85</image:loc>
+      <image:title>Yoga Retreats in France: A Guide to Provence</image:title>
     </image:image>
   </url>
 
